@@ -4,16 +4,17 @@ if(true){
     console.log(age);
 
 }
+console.log(age);                                /* In above we have set the age variable globally so that's why it is shwoing in output as "25". */
 
 
-function solve(){                                /* This is a function whose name is solve and here we are just printing our age. */
+function solve(){                                /* This is a function whose name is solve and here we are just printing our age in "year". */
 
-    var age = 25;                                /* This variable "age" is only going to work inside of this function "solve". */
-    console.log(age);      
+    var year = 25;                               /* This variable "year" is only going to work inside of this function "solve". */
+    console.log(year);      
 
 }
 solve();                                         /* Calling the function. */
-console.log(age);                                /* This cant be run because age is not defined globally yet. */
+console.log(year);                               /* This cant be run because "year" is not defined globally yet. */
 
 
 var x = 10;                                      /* Initialized and assigned the value. */
@@ -44,8 +45,6 @@ console.log(nameis);                             /* Let is a blocked scope, mean
     console.log(love);
 
 }
-
-
 console.log(love);                               /* It will give us error. */
 
 
