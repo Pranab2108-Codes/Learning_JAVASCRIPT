@@ -95,7 +95,7 @@ function bitwiseOpearator(){
     console.log(2 | 5);                               /* This is called as Bitwise OR(|). */
     console.log(~0);                                  /* This is called as Bitwise NOT(!). */
 
-    console.log(2 ^ 2);
+    console.log(2 ^ 2);                               /* This is the Bitwise XOR(^). */
 
     console.log(5<<1);                                /* Whenever a number is being left shift it will multiply with 2 but the last digit denote how many times it will multiply. */
     console.log(5<<2);                                /* It means 5 will multiply by 2 with 2 times = 5*2*2 so answer should be 20 here.  */
