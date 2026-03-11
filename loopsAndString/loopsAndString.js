@@ -35,13 +35,15 @@ while(i<=5 ){                            /* while( condition ), here we apply th
     else console.log("Hello");           
     i++;                                 
 }                                        
-  
+ 
+
 var j=1;                                 /* It is the initialization. */
 do{                                      /* do */
   console.log("Love");                   /* { */
   j++;                                   /* Body, where we must increment or decrement according to our need, which is an updation part. */
 }while(j<=5);                            /* }while( condition ), here we apply the condition at the end. */
 
+                                         /* Now starts about Strings. */
 let firstName = "Pranab";                /* We can create a string by using double inverted comma. */
 var lastName = 'Sethi';                  /* We can create a string by using single inverted comma. */
 var newStyle = `Hey                      
@@ -53,18 +55,22 @@ let fullName = new String("Pranab");     /* This is also a kind of creation. */
 console.log(fullName);
 console.log(typeof(fullName));
 
+
 let language1 = "odia ";
 let language2 = "English";
 console.log(language1+language2);        /* Concatenating two different strings in to one string. */
+
 
 let op1 = 'Hey';
 let op2 = 'Broo';
 let finalAns = `${op1} ${op2}`;          /* If we ever want to use the string variables We can use them inside of back ticks but we have to use $(Dollar) sign and followed with curly braces, so inside of those curly braces we can put our variables. */
 console.log(finalAns);
 
+
 console.log(op2.length);                 /* This way we can find length. */
 console.log(op1.toUpperCase());          /* We can convert whole string into an uppercase. */
 console.log(op2.toLowerCase());          /* We can convert whole string into a lowercase. */
+
 
 let str = "Hello Babbar bhaiya";
 console.log(str.substring(2));           /* We can print the substring also using this method. */
@@ -75,4 +81,4 @@ let sentence = "Hey + everyone + \"this\" is Pranab";
 let words = sentence.split(' ');         /* We can split the string according to us. */
 console.log(words);
 console.log(sentence.join(','));         /* Join can not be applied over a string, it can be only apply on array, so this will give us error. */
-console.log(words.join('_'));            /* we can join the array into a string according to us. */
+console.log(words.join("_"));            /* we can join the array into a string according to us. */
