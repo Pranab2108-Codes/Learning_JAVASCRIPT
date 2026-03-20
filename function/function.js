@@ -80,3 +80,104 @@ let exponential = (m,n) => {                             /* This is also a new t
 
 }
 console.log(exponential(3,2));
+
+
+let greet = function(){                                  /* Here we can assign the function to a variable, which we also known as the "function Expression". */
+
+    console.log("Greeting for the day");
+
+}
+greet();
+
+
+function greetMe(greet,fullName){                        /* Here we can assign the function inside of the function. */
+
+    console.log("Hello ",fullName);
+    greet();                                             /* Declaration is in somewhere else. */
+
+}
+greetMe(greet,"Pranab");
+
+
+function solve(number){                                  /* Inside of this solve function nothing will happen with 5, only it will return a function, here we declare the function inside of this solve function. */
+
+    return function(number){                             /* Solve return another function, this whole function(number){ return number*number } will be the result of the solve function. */
+
+        return number*number;
+        
+    }
+}
+let result = solve(5);                                   /*  Now the result became a function. */
+console.log(result(7));                                  /* So the only answer it will give is 49, and that 5 is not playing any major role now. */
+
+
+const arr = [                                            /* We can make the array of functions also. */
+    function(a,b){
+
+        return a+b;
+
+    },
+    function(a,b){
+
+        return a-b;
+
+    },
+    function(a,b){
+
+        return a*b;
+
+    }
+];
+let first = arr[0];
+console.log(first(10,5));
+let second = arr[1];
+console.log(second(5,8));
+
+
+function getMyName(fName = "Prabhu", lName = "Deva"){    /* Here in "fName" and "lName" we are passing default parameters, means if we dont pass anything while calling this function then it will automatically takes the default values of parameters. */
+
+    console.log("Hey my name is:", fName,lName);
+
+}
+getMyName("Pranab", "Sethi");                            /* Here we are passing these values, so the parameters will takes these values only. */
+getMyName();                                             /* Here it will take the default values of parameters like for "fName" as "Prabhu" and "lName" as "Deva". */
+
+                                                         /* Here we can say that, one parameter is depending on the other parameter. */
+function getName(fName = "Prabhu", lName = fName.toUpperCase()){
+
+    console.log("Hey my name is:", fName,lName);
+
+}
+getName("Pranab");
+getName();
+
+                                                         /* We can pass the default parameters as object also.*/
+function solveNow(value = {age:25, weight:76.89, height:"5ft 6 inch"}){
+
+    console.log("Hello the value is:",value);
+}
+solveNow(63.46);
+solveNow();
+
+
+function solveIt(item = "Pranab2108.codes"){
+
+    console.log("Hello world this is:",item);
+
+}
+solveIt();
+solveIt(null);                                           /* Here the parameter will go as null and also print the value as null. */
+solveIt(undefined);                                      /* But it will print the "Pranab2108.codes". */
+
+
+function getAge(){
+
+    return 190;
+}
+function utility(name = "Lovely Barsha", age= getAge()){ /* Here we can pass the parameter as function. */
+
+    console.log(name,age);
+
+}
+utility("Barsha",26);
+utility();
