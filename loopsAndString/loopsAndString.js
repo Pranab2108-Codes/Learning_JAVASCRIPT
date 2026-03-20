@@ -82,3 +82,38 @@ let words = sentence.split(' ');         /* We can split the string according to
 console.log(words);
 console.log(sentence.join(','));         /* Join can not be applied over a string, it can be only apply on array, so this will give us error. */
 console.log(words.join("_"));            /* we can join the array into a string according to us. */
+
+
+let arr = [10,20,30,40,50];              
+arr.forEach((element,index) => {         /* This is the for each loop. */
+
+    console.log("Element is: ", element ,"Index of this element is: ", index);
+
+})
+
+
+let obj = {
+
+    name: "Pranab",
+    age: 25,
+    weight: 76.11,
+    greet: function(){
+        console.log("Hello Everyone.");
+    }
+
+};
+
+
+for(let key in obj){                     /* This is the for in loop. */
+
+    console.log(key, " ", obj[key]);     /* This is how we acces the key of the object's. */
+
+}
+
+
+let brr = [1,2,3,4,5];
+for(let value of brr){                   /* This is the for of loop. */
+
+    console.log(value);
+
+}
