@@ -1,0 +1,28 @@
+> var myDiv = document.querySelector('#myDiv');
+< undefined
+> myDiv;
+< <div id="myDiv" style="background-color: grey;">
+<p id="fPara">First</p>
+<h1>Second</h1>
+<p>Third</p>
+</div>
+> let element = document.createElement('span');
+< undefined
+> element;
+< <span></span>
+> element.textContent = "This is me Pranab Sethi";
+< "This is me Pranab Sethi"
+> myDiv.insertAdjacentElement('beforebegin',element);
+< <span>This is me Pranab Sethi</span>
+> myDiv.insertAdjacentElement('afterbegin',element);
+< <span>This is me Pranab Sethi</span>
+> myDiv.insertAdjacentElement('beforeend',element);
+< <span>This is me Pranab Sethi</span>
+> myDiv.insertAdjacentElement('afterend',element);
+< <span>This is me Pranab Sethi</span>
+> let parent = document.querySelector('#myDiv');
+< undefined
+> let child = document.querySelector('#fPara');
+< undefined
+> parent.removeChild(child);
+< <p id="fPara">First</p>

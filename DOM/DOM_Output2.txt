@@ -1,0 +1,18 @@
+> var element = document.querySelector('#fDiv');
+< undefined
+> element;
+< <div id="fDiv">…</div>
+> element.textContent;
+< "
+            
+                This is my First Paragraph.
+                
+                    Text
+                
+            
+            This is my Second paragraph.
+        "
+> element.innerText;
+< "This is my First Paragraph. Text
+
+This is my Second paragraph."

@@ -1,0 +1,52 @@
+> Selected Element
+< <html>…</html>
+> document.getElementById(fPara);
+< null
+> document.getElementById("fPara");
+< <p id="fPara" class="text">First Paragraph</p>
+> document.getElementById("fHeading");
+< <h1 id="fHeading" class="text">First Heading</h1>
+> document.getElementsByClassName("text");
+< HTMLCollection [<p id="fPara">, <p id="sPara">, <h1 id="fHeading">] (3)
+> document.getElementsByTagName('p');
+< HTMLCollection [<p id="fPara">, <p id="sPara">] (2)
+> document.querySelector('#fPara');
+< <p id="fPara" class="text">First Paragraph</p>
+> document.querySelector('.text');
+< <p id="fPara" class="text">First Paragraph</p>
+> document.querySelectorAll('.text');
+< NodeList [<p id="fPara">, <p id="sPara">, <h1 id="fHeading">] (3)
+> document.querySelectorAll('p');
+< NodeList [<p id="fPara">, <p id="sPara">] (2)
+> Selected Element
+< <h1 class="text" id="fHeading">First Heading</h1>
+< <p class="text" id="sPara">Second Paragraph</p>
+< <p class="text" id="fPara">First Paragraph</p>
+> $0;
+< <p class="text" id="fPara">First Paragraph</p>
+> let para = $0;
+< undefined
+> para;
+< <p class="text" id="fPara">First Paragraph</p>
+> Selected Element
+< <p class="text" id="sPara">Second Paragraph</p>
+< <h1 class="text" id="fHeading">First Heading</h1>
+> var heading = $0;
+< undefined
+> heading;
+< <h1 class="text" id="fHeading">First Heading</h1>
+> heading.innerHTML;
+< "First Heading"
+> heading.innerHTML = '<p>Hello Everyone now we are setting through innerHTML</p>';
+< "<p>Hello Everyone now we are setting through innerHTML</p>"
+> heading;
+< <h1 class="text" id="fHeading">
+<p>Hello Everyone now we are setting through innerHTML</p>
+</h1>
+> heading.innerHTML += 'Here we are setting the heading without replacing the previous text';
+< "<p>Hello Everyone now we are setting through innerHTML</p>Here we are setting the heading without replacing the previous text"
+> heading;
+< <h1 class="text" id="fHeading">
+<p>Hello Everyone now we are setting through innerHTML</p>
+"Here we are setting the heading without replacing the previous text"
+</h1>

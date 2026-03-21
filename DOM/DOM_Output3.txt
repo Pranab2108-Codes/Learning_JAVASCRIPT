@@ -1,0 +1,23 @@
+> var fHeading = document.createElement('h1');
+< undefined
+> fHeading;
+< <h1></h1>
+> fHeading.textContent = "My name is Pranab Sethi";
+< "My name is Pranab Sethi"
+> fHeading;
+< <h1>My name is Pranab Sethi</h1>
+> var bodyTag = document.querySelector('body');
+< undefined
+> bodyTag.appendChild(fHeading);
+< <h1>My name is Pranab Sethi</h1>
+> bodyTag;
+< <body>
+<div id="fDiv">
+<p>
+" This is my First Paragraph. "
+<span> Text </span>
+</p>
+<p>This is my Second paragraph.</p>
+</div>
+<h1>My name is Pranab Sethi</h1>
+</body>

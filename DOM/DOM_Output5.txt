@@ -1,0 +1,71 @@
+> let secondPara = document.getElementById('sPara');
+< undefined
+> secondPara;
+< <p id="sPara" style="background-color: orange; padding: 0.8rem;">Second paragraph.</p>
+> console.log(secondPara.style);
+[Log] CSSStyleProperties {0: "background-color", 1: "padding-top", 2: "padding-right", 3: "padding-bottom", 4: "padding-left", cssFloat: "", ApplePayButtonStyle: "", ApplePayButtonType: "", EpubCaptionSide: "", EpubHyphens: "", …}
+< undefined
+> secondPara.style.backgroundColor = 'blue';
+< "blue"
+> secondPara.style.color = 'white';
+< "white"
+> let secondDiv = document.getElementById('sDiv');
+< undefined
+> secondDiv;
+< <div id="sDiv" style="background-color: yellow; padding: 1.2rem;">…</div>
+> secondDiv.style.cssText;
+< "background-color: yellow; padding: 1.2rem;"
+> secondDiv.style.cssText = 'background-color: black; color: white; padding: 0.5rem';
+< "background-color: black; color: white; padding: 0.5rem"
+> secondDiv.style.cssText;
+< "background-color: black; color: white; padding: 0.5rem;"
+> let firstDiv = document.querySelector('#fDiv');
+< undefined
+> firstDiv;
+< <div id="fDiv" style="background-color: aqua; padding: 2rem;">…</div>
+> firstDiv.setAttribute('class','divClass');
+< undefined
+> firstDiv;
+< <div id="fDiv" style="background-color: aqua; padding: 2rem;" class="divClass">…</div>
+> Selected Element
+< <p id="fPara" class="firstClass secondClass" style="background-color: green; padding: 1rem;">First paragraph.</p>
+> let fPara = $0;
+< undefined
+> fPara;
+< <p id="fPara" class="firstClass secondClass" style="background-color: green; padding: 1rem;">First paragraph.</p>
+> fPara.className;
+< "firstClass secondClass"
+> fPara.className = 'Sung, jinwoo';
+< "Sung, jinwoo"
+> fPara.className;
+< "Sung, jinwoo"
+> fPara;
+< <p id="fPara" class="Sung, jinwoo" style="background-color: green; padding: 1rem;">First paragraph.</p>
+> fPara.className = 'Sung jinwoo';
+< "Sung jinwoo"
+> fPara.className;
+< "Sung jinwoo"
+> fPara;
+< <p id="fPara" class="Sung jinwoo" style="background-color: green; padding: 1rem;">First paragraph.</p>
+> fPara.classList;
+< DOMTokenList {0: "Sung", 1: "jinwoo", length: 2, value: "Sung jinwoo", item: function, contains: function, add: function, …}
+> fPara.classList.add('thirdClass');
+< undefined
+> fPara.classList;
+< DOMTokenList {0: "Sung", 1: "jinwoo", 2: "thirdClass", length: 3, value: "Sung jinwoo thirdClass", item: function, contains: function, add: function, …}
+> fPara.classList.remove('Sung');
+< undefined
+> fPara.classList;
+< DOMTokenList {0: "jinwoo", 1: "thirdClass", length: 2, value: "jinwoo thirdClass", item: function, contains: function, add: function, …}
+> fPara.classList.toggle('thirdClass');
+< false
+> fPara.classList;
+< DOMTokenList {0: "jinwoo", length: 1, value: "jinwoo", item: function, contains: function, add: function, …}
+> fPara.classList.toggle('thirdClass');
+< true
+> fPara.classList;
+< DOMTokenList {0: "jinwoo", 1: "thirdClass", length: 2, value: "jinwoo thirdClass", item: function, contains: function, add: function, …}
+> fPara.classList.contains('Sung');
+< false
+> fPara.classList.contains('thirdClass');
+< true
