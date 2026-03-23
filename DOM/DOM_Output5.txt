@@ -35,12 +35,6 @@
 < <p id="fPara" class="firstClass secondClass" style="background-color: green; padding: 1rem;">First paragraph.</p>
 > fPara.className;
 < "firstClass secondClass"
-> fPara.className = 'Sung, jinwoo';
-< "Sung, jinwoo"
-> fPara.className;
-< "Sung, jinwoo"
-> fPara;
-< <p id="fPara" class="Sung, jinwoo" style="background-color: green; padding: 1rem;">First paragraph.</p>
 > fPara.className = 'Sung jinwoo';
 < "Sung jinwoo"
 > fPara.className;
