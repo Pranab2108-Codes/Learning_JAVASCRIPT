@@ -28,11 +28,45 @@ function createChild(title, description, id) {
 }
 
 
-function addTodo() {
+// function addTodo() {
 
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("description").value;
+//     const title = document.getElementById("title").value;
+//     const description = document.getElementById("description").value;
+//     const parent = document.getElementById("todos");
+//     parent.appendChild(createChild(title, description, globalId++));
+
+// }
+
+
+function updateDOMAccordingToState(state){
+
     const parent = document.getElementById("todos");
-    parent.appendChild(createChild(title, description, globalId++));
+    parent.innerHTML= "";
+    for(let i =0;i<state.length;i++){
+        const child = createChild(state[i].title, state[i].description, state[i].id);
+        parent.appendChild(child);
+    }
 
 }
+// updateDOMAccordingToState([{
+
+//     title: "Go to GYM",
+//     description: "From 6:00 AM - 8:00 AM",
+//     id: 1
+
+// },
+// {
+
+//     title: "Go to STUDY",
+//     description: "From 8:00 AM - 12:00 PM",
+//     id: 2
+
+// }]);
+
+window.setInterval(async function() {
+
+    const res = await fetch("https://sum-server.100xdevs.com/todos");
+    const json = await res.json();
+    updateDOMAccordingToState(json.todos);
+
+},5000);
