@@ -70,3 +70,4 @@ window.setInterval(async function() {
     updateDOMAccordingToState(json.todos);
 
 },5000);
+
