@@ -40,7 +40,9 @@ let ansCrr = crr.map((number) => {                                /* Map functio
 console.log(ansCrr);                                              /* It also cant replace the original array. */
 
 crr.map((number,index,array) => {                                 /* Map function's generalize syntax. */
+
     console.log(number,index,array);
+    
 });
 
 
@@ -52,6 +54,7 @@ var ansDrr = drr.filter((number) =>{                              /* This filter
 
 });
 console.log(ansDrr);
+
 
 var err = [1.76,"love",null,true];
 let ansErr = err.filter((number) =>{
@@ -103,7 +106,9 @@ let sumOfElements = function(irr){                                /* We can also
 
     let sum =0;
     irr.forEach((element) => {
+
         sum += element;
+        
     });
     return sum;
     
