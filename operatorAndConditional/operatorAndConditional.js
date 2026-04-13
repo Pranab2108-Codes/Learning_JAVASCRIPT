@@ -112,35 +112,51 @@ function conditionalStatements(){
     let age = 19;
 
     if(age>3) {
+
         console.log("Yes age is greater than 3");     /* Normal If statement, through this we can surely say this, else statement is optional. */
+    
     }
 
     if(age<18){
+
         console.log("Not eligible for voting");       /* If-Else statement */
+    
     }
     else{
+
         console.log("Eligible for voting");           /* Because of the if condition didn't satisfied so, it go further and print the else statement. */   
+    
     }
 
     if(age <18){                                      /* Here we can see  Else-If statements, means if the condition1 will fail then it can go further and check for condition2, but if the condition2 will succeed then it will print the answer and not going to move further checks, if this condition2 also fails then it will go to condition3 and so on. */
+        
         console.log("Less than 18");
+    
     }
     else if(age < 19){
+
         console.log("Less than 19");
+    
     }
     else if(age < 20){
+
         if(age > 19 && age <= 20){                    /* Nested If-Else, it means inside of If we can give as many as we want if-else and that also goes for the Else part. */
+            
             console.log("Less than 20");
+        
         }
         else console.log("Go further");               /* It will print this statement "Go further" and won't go further to else case. */
 
     }
     else{                                             /* This case will never be check because in above it was already give us the answer. */
+        
         console.log(age);
+    
     }
 
     let num = 3;
     switch(num){
+
         case 1: console.log('A');                     /* For each case there will be the answer, ofcourse in a question there will be no more than one answer so after printing/returning the answer there should be break. */
         break;
         case 2: console.log('B');
@@ -149,6 +165,7 @@ function conditionalStatements(){
         case 4: console.log('D');
         break;
         default: console.log('F');
+        
     }
     
 }
