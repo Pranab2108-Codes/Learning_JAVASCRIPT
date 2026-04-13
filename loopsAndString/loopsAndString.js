@@ -6,42 +6,56 @@ console.log("Hey");
 
                                          /* That's why when ever we need the set of instructions to be execute all at once then we prefer "loop". */
 for(var i=1; i<=5; i++){                 /* for( initialization; condition; updation ) */
+    
     console.log("I am Pranab");          /* { */
-}                                        /*   Body */
-                                         /* } */
-
+                                         /*   Body */
+}                                        /* } */
+                                         
 for(let i=5;i>=1;i--){                   /* As i is the blocked variable, it will only run inside of this for loop only. */
+
     console.log(i);                      /* Reverse order printing. */
+
 }
 
-
 for(let i=1;i<=5;i++){
+    
     if(i==4){
+
         break;                           /* Means no more iteration anymore, because after break it will be out of the loop. */
+
     }
     else if(i==3){
+
         continue;                        /* Here it means the current iteration will be skip, because of the continue. */
+    
     }
     else console.log(i);
+
 }
 
 
 var i=1;                                 /* It is better to initialize the variable at outside of while loop. */
 while(i<=5 ){                            /* while( condition ), here we apply the condition. */
+    
     if(i==3) {                           /* { */
-        i++;                             /* Body, inside of body we must either increment or decrement according to our need so it is the updation part. */
-        continue;                        /* } */
+                                         /* Body, inside of body we must either increment or decrement according to our need so it is the updation part. */
+        i++;                             /* } */
+        continue;                        
+    
     }                 
     else console.log("Hello");           
-    i++;                                 
+    i++;  
+
 }                                        
  
 
 var j=1;                                 /* It is the initialization. */
 do{                                      /* do */
-  console.log("Love");                   /* { */
-  j++;                                   /* Body, where we must increment or decrement according to our need, which is an updation part. */
-}while(j<=5);                            /* }while( condition ), here we apply the condition at the end. */
+                                         /* { */
+  console.log("Love");                   /* Body, where we must increment or decrement according to our need, which is an updation part. */
+  j++;                                   /* }while( condition ), here we apply the condition at the end. */
+
+}while(j<=5);                            
 
                                          /* Now starts about Strings. */
 let firstName = "Pranab";                /* We can create a string by using double inverted comma. */
@@ -98,7 +112,9 @@ let obj = {
     age: 25,
     weight: 76.11,
     greet: function(){
+
         console.log("Hello Everyone.");
+        
     }
 
 };
