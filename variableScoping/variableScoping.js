@@ -1,6 +1,5 @@
 var age = 25;                                                       /* Global scope, because it's parent is this file only not any block, so we can use this inside of any function, loop, block anywhere. */
 
-
 console.log(age);                                                   /* Inside of this file, but not inside of any scope, function, iteration, condition... */
 
 {
