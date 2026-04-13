@@ -1,6 +1,7 @@
 function sayMyName(){                                    /* This part is called as function declaration, inside of the brackets ( parameters ) we can pass many parameters, or no parameters also. */
 
     console.log("Pranab Sethi");                         /* This is the actual logic inside of the function, which supposed to execute, this is called as function definition. */
+
 }
 sayMyName();                                             /* This part is called the function calling, we are not passing any parameters here. */   
 
@@ -35,8 +36,10 @@ console.log(fullName);
 
 
 function getMe(one , two){
+
     var answer = one+ " " +two;                          /* Here "one" and "two" were the integers but because of the empty string( " " ) also got concatenated the whole answer got turned in to string. */
     return answer;
+
 }
 console.log(getMe(21082001,23223053));                   /* See these are just the "Number" data type. */
 
@@ -106,12 +109,14 @@ function solve(number){                                  /* Inside of this solve
         return number*number;
         
     }
+
 }
 let result = solve(5);                                   /*  Now the result became a function. */
 console.log(result(7));                                  /* So the only answer it will give is 49, and that 5 is not playing any major role now. */
 
 
 const arr = [                                            /* We can make the array of functions also. */
+    
     function(a,b){
 
         return a+b;
@@ -127,6 +132,7 @@ const arr = [                                            /* We can make the arra
         return a*b;
 
     }
+
 ];
 let first = arr[0];
 console.log(first(10,5));
@@ -155,6 +161,7 @@ getName();
 function solveNow(value = {age:25, weight:76.89, height:"5ft 6 inch"}){
 
     console.log("Hello the value is:",value);
+
 }
 solveNow(63.46);
 solveNow();
@@ -173,7 +180,10 @@ solveIt(undefined);                                      /* But it will print th
 function getAge(){
 
     return 190;
+
 }
+
+
 function utility(name = "Lovely Barsha", age= getAge()){ /* Here we can pass the parameter as function. */
 
     console.log(name,age);
