@@ -13,23 +13,23 @@ function loveName(fullName){                                  /* Here we are dec
 
 } 
 
+
 {                                                             /* Let's assume it as current block. */
+                 
+    currentQuestion();                                        /* Here 1st we are calling the function, then declaring. */
+    let currentQuestion = function(){                         /* But function Hoisting not work on function Expression. */
 
-                  
-currentQuestion();                                            /* Here 1st we are calling the function, then declaring. */
-let currentQuestion = function(){                             /* But function Hoisting not work on function Expression. */
+        console.log("Lets check with function Expression");
 
-    console.log("Lets check with function Expression");
-
-}
+    }
 
 
-newQuestion();                                                /* Here also 1st we are calling the function, then declaring. */
-let newQuestion = () => {                                     /* The function Hoisting also can't work on Arraow function. */
+    newQuestion();                                            /* Here also 1st we are calling the function, then declaring. */
+    let newQuestion = () => {                                 /* The function Hoisting also can't work on Arraow function. */
 
-    console.log("Final check");
+        console.log("Final check");
 
-}
+    }
 
 }
 
